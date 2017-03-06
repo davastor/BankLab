@@ -22,5 +22,5 @@ void Account::Withdraw(int numberOfPennies)
 
 int Account::getBalance()
 {
-	return 0;
+	return _balanceInPennies;
 }
