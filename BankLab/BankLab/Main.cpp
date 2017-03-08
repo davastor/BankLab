@@ -8,6 +8,7 @@ void DisplayMenu();
 void AddAccountMenu();
 void TransactMenu();
 void DisplayAccountsMenu();
+void DisplayLog();
 
 int main()
 {
@@ -27,6 +28,7 @@ void DisplayMenu()
 		cout << "1) Add Account" << endl;
 		cout << "2) Transact" << endl;
 		cout << "3) Display Accounts" << endl;
+		cout << "4) Display Log " << endl;
 		cout << "What would you like to do?" << endl;
 		cin >> choice;
 
@@ -40,6 +42,9 @@ void DisplayMenu()
 			break;
 		case 3:
 			DisplayAccountsMenu();
+			break;
+		case 4:
+			DisplayLog();
 			break;
 		default:
 			break;
@@ -70,6 +75,8 @@ void AddAccountMenu()
 void TransactMenu()
 {
 	system("cls");
+
+	//takes the INDEX/POSITION of the account number, not the actual account number itself 
 	cout << "Which account do you want to access?" << endl;
 	cout << bank.ListAccounts() << endl;
 	int chosenAccount;
@@ -105,4 +112,19 @@ void DisplayAccountsMenu()
 	system("cls");
 	cout << bank.ShowAccounts();
 	system("PAUSE");
+}
+
+void DisplayLog()
+{
+	system("cls");
+	//takes the INDEX/POSITION of the account number, not the actual account number itself 
+	cout << "Which account do you want to access?" << endl;
+	cout << bank.ListAccounts() << endl;
+	int chosenAccount;
+	cin >> chosenAccount;
+
+	system("cls");
+	cout << "LOGS" << endl;
+	cout << bank.DisplayLogInfo(chosenAccount) << endl;
+	system("pause");
 }

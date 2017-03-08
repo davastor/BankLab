@@ -17,7 +17,8 @@ public:
 	string ShowAccounts();
 	string getName();
 	string ListAccounts();
-	void Deposit(int accountNumber, int amount);
-	void Withdraw(int accountNumber, int amount);
+	string DisplayLogInfo(int chosenAccount);
+	void Deposit(int chosenAccount, int amount);
+	void Withdraw(int chosenAccount, int amount);
 };
 
