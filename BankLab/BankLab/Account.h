@@ -13,6 +13,7 @@ public:
 	Account(Customer customer, int accountNumber);
 	~Account();
 
+	int getAccountNumber();
 	void Deposit(int numberOfPennies);
 	void Withdraw(int numberOfPennies);
 	int getBalance();

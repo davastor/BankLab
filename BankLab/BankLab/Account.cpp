@@ -10,6 +10,11 @@ Account::~Account()
 {
 }
 
+int Account::getAccountNumber()
+{
+	return _accountNumber;
+}
+
 void Account::Deposit(int numberOfPennies)
 {
 	_balanceInPennies += numberOfPennies;
